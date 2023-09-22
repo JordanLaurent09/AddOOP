@@ -55,8 +55,8 @@ namespace Lesson22_09
 
             Rectangle rectangle = new Rectangle(20, 34);
             Triangle triangle = new Triangle(45, 120);
-            rectangle.Display();
-            triangle.Display();
+            Console.WriteLine(rectangle.Square());
+            Console.WriteLine(triangle.Square());
 
 
 
@@ -131,49 +131,100 @@ namespace Lesson22_09
 
     // Создание абстрактного класса Person, общего для Client и Employee
     // Замена класса Person на класс Figures
-    abstract class Figures
+
+
+    abstract class Figure
     {
-        public int Basement { get; set; }
-        public Figures(int basement)
+        private string _name;
+
+        public string Name { get; set; }
+
+        public abstract double Area2 { get; }
+
+        public Figure(string name)
         {
-            Basement = basement;
+            _name = name;
         }
 
-        // Абстрактный метод не нуждается в реализации; он может быть переопределен в классах-наследниках
-        public abstract double Square();
+        public abstract double Area();
+
+        public virtual void Print()
+        {
+            Console.WriteLine("Имя фигуры: " + _name);
+        } 
+    }
+
+    class Triangle : Figure
+    {
+        private double _a;
+        private double _b;
+        private double _c;
+
+        public Triangle(string name, double a, double b, double c):base(name)
+        {
+            _a = a;
+            _b = b;
+            _c = c;
+        }
         
+        public void SetABC(double a, double b, double c)
+        {
+            _a = a;
+            _b = b;
+            _c = c;
+        }
+
+        public string GetABC()
+        {
+            return $"Сторона а равна {_a}, сторона в равна {_b}, а сторона с равна{_c}";
+        }
+
+
     }
 
-    class Rectangle : Figures
-    {
-        public int Size { get; set; }
+    //abstract class Figures
+    //{
+    //    public int Basement { get; set; }
+    //    public Figures(int basement)
+    //    {
+    //        Basement = basement;
+    //    }
 
-        public Rectangle(int basement, int size):base(basement)
-        {
-            Size = size;
-        }
+    //    // Абстрактный метод не нуждается в реализации; он может быть переопределен в классах-наследниках
+    //    public abstract double Square();
+        
+    //}
 
-        public override double Square()
-        {
-            return Size * Basement;
-        }
-    }
+    //class Rectangle : Figures
+    //{
+    //    public int Size { get; set; }
 
-    class Triangle : Figures
-    {
-        public int Height { get; set; }
+    //    public Rectangle(int basement, int size):base(basement)
+    //    {
+    //        Size = size;
+    //    }
 
-        public Triangle(int basement, int height):base(basement)
-        {
-            Height = height;
-        }
-        public override double Square()
-        {
-            throw new NotImplementedException();
+    //    public override double Square()
+    //    {
+    //        return Size * Basement;
+    //    }
+    //}
 
-        }
+    //class Triangle : Figures
+    //{
+    //    public int Height { get; set; }
 
-    }
+    //    public Triangle(int basement, int height):base(basement)
+    //    {
+    //        Height = height;
+    //    }
+    //    public override double Square()
+    //    {
+    //        throw new NotImplementedException();
+
+    //    }
+
+    //}
 
     
 }
