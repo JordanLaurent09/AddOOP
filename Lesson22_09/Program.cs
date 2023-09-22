@@ -1,4 +1,5 @@
 ﻿using System.Data.Common;
+using System.Drawing;
 using System.Numerics;
 
 namespace Lesson22_09
@@ -20,30 +21,45 @@ namespace Lesson22_09
             //someClass.secondValue = 30;
             //Console.WriteLine(someClass + someClass);
 
-            Matrix mat1 = new Matrix();
-            mat1.matrixOne = new int[3, 3]
-            {
-                {1,2,3 },
-                {4,5,6 },
-                {7,8,9 }
-            };
-            mat1.matrixTwo = new int[3, 3]
-            {
-                {1,2,3 },
-                {4,5,6 },
-                {7,8,9 }
-            };
+            //Matrix mat1 = new Matrix();
+            //mat1.matrixOne = new int[3, 3]
+            //{
+            //    {1,2,3 },
+            //    {4,5,6 },
+            //    {7,8,9 }
+            //};
+            //mat1.matrixTwo = new int[3, 3]
+            //{
+            //    {1,2,3 },
+            //    {4,5,6 },
+            //    {7,8,9 }
+            //};
 
-            int[,] array = +mat1;
-            
-            for(int y = 0; y < array.GetLength(0); y++)
-            {
-                for(int x = 0; x < array.GetLength(1); x++) 
-                {
-                    Console.Write($"{array[y,x]} ");
-                }
-                Console.WriteLine();
-            }
+            //int[,] array = +mat1;
+
+            //for(int y = 0; y < array.GetLength(0); y++)
+            //{
+            //    for(int x = 0; x < array.GetLength(1); x++) 
+            //    {
+            //        Console.Write($"{array[y,x]} ");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            // Работа с абстрактным классом
+
+            //Client client = new Client("Alice", 500);
+            //Employee employee = new Employee("Freddy", "Director");
+            //client.Display();
+            //employee.Display();
+
+            Rectangle rectangle = new Rectangle(20, 34);
+            Triangle triangle = new Triangle(45, 120);
+            rectangle.Display();
+            triangle.Display();
+
+
+
         }
     }
 
@@ -110,9 +126,54 @@ namespace Lesson22_09
             }
 
             return sumMatrix;
-        }
-        
+        }       
+    }
 
+    // Создание абстрактного класса Person, общего для Client и Employee
+    // Замена класса Person на класс Figures
+    abstract class Figures
+    {
+        public int Basement { get; set; }
+        public Figures(int basement)
+        {
+            Basement = basement;
+        }
+
+        // Абстрактный метод не нуждается в реализации; он может быть переопределен в классах-наследниках
+        public abstract double Square();
+        
+    }
+
+    class Rectangle : Figures
+    {
+        public int Size { get; set; }
+
+        public Rectangle(int basement, int size):base(basement)
+        {
+            Size = size;
+        }
+
+        public override double Square()
+        {
+            return Size * Basement;
+        }
+    }
+
+    class Triangle : Figures
+    {
+        public int Height { get; set; }
+
+        public Triangle(int basement, int height):base(basement)
+        {
+            Height = height;
+        }
+        public override double Square()
+        {
+            throw new NotImplementedException();
+
+        }
 
     }
+
+    
 }
