@@ -53,10 +53,10 @@ namespace Lesson22_09
             //client.Display();
             //employee.Display();
 
-            Rectangle rectangle = new Rectangle(20, 34);
-            Triangle triangle = new Triangle(45, 120);
-            Console.WriteLine(rectangle.Square());
-            Console.WriteLine(triangle.Square());
+            //Rectangle rectangle = new Rectangle(20, 34);
+            //Triangle triangle = new Triangle(45, 120);
+            //Console.WriteLine(rectangle.Square());
+            //Console.WriteLine(triangle.Square());
 
 
 
@@ -161,13 +161,13 @@ namespace Lesson22_09
         private double _c;
         private double _h;
 
-        public Triangle(string name, double a, double b, double c):base(name)
+        public Triangle(string name, double a, double b, double c) : base(name)
         {
             _a = a;
             _b = b;
             _c = c;
         }
-        
+
         public void SetABC(double a, double b, double c)
         {
             _a = a;
@@ -180,21 +180,33 @@ namespace Lesson22_09
             return $"Сторона а равна {_a}, сторона в равна {_b}, а сторона с равна{_c}";
         }
 
+        public override double Area()
+        {
+            return 0;
+        }
+
+        public override double Area2
+        {
+            get
+            {
+                return 0;
+            }
+        }
 
     }
 
-    //abstract class Figures
-    //{
-    //    public int Basement { get; set; }
-    //    public Figures(int basement)
-    //    {
-    //        Basement = basement;
-    //    }
+    abstract class Figures
+    {
+        public int Basement { get; set; }
+        public Figures(int basement)
+        {
+            Basement = basement;
+        }
 
-    //    // Абстрактный метод не нуждается в реализации; он может быть переопределен в классах-наследниках
-    //    public abstract double Square();
-        
-    //}
+        //    // Абстрактный метод не нуждается в реализации; он может быть переопределен в классах-наследниках
+        public abstract double Square();
+
+    }
 
     //class Rectangle : Figures
     //{
@@ -227,5 +239,5 @@ namespace Lesson22_09
 
     //}
 
-    
+
 }
