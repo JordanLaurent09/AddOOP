@@ -159,6 +159,7 @@ namespace Lesson22_09
         private double _a;
         private double _b;
         private double _c;
+        private double _h;
 
         public Triangle(string name, double a, double b, double c):base(name)
         {
