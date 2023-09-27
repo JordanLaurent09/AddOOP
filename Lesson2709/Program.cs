@@ -28,10 +28,50 @@ namespace Lesson2709
             Console.WriteLine(tuple.Item1);
             Console.WriteLine( tuple.Item3);
 
+            List<(string, int, double)> students = new List<(string, int, double)>
+            {
+                ("Шуцкий Максим", 22, 98.5),
+                ("Лубенец Александр", 35, 87.9),
+                ("Пак Виктор", 23, 20.1)
+            };
+
+            Console.WriteLine(GetMeanMark(students));
+            Console.WriteLine(GetMeanAge(students));
+
+            // Методы расширения самостоятельная
             CharSeeker charSeeker = new CharSeeker();
             charSeeker.text = "ПРОГРАММИРОВАНИЕ.ТУПЛЮ КАК СЛОН";
             int position = charSeeker.charPosition('Р');
             Console.WriteLine(position);
+        }
+        // Метод с самым высоким баллом
+        public static string GetMeanMark(List<(string, int, double)> students)
+        {
+            double max = 0;
+            string name = "";
+
+            for (int i = 0; i < students.Count; i++)
+            {
+                if (students[i].Item3 > max)
+                {
+                    max = students[i].Item3;
+                    name = students[i].Item1;
+                }
+            }
+
+            return name;
+        }
+
+        // Средний возраст 
+
+        public static int GetMeanAge(List<(string, int, double)> students)
+        {
+            int age = 0;
+            for(int i = 0; i < students.Count; i++)
+            {
+                age += students[i].Item2;
+            }
+            return age / students.Count;
         }
     }
 
@@ -109,7 +149,7 @@ namespace Lesson2709
             return someValue;
         }
     }
-
+    // Два класса по самостоятельной работе с методами расширения
     class CharSeeker
     {
         public string text;
