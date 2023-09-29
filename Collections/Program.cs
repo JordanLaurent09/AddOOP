@@ -107,6 +107,26 @@
             // Stack.Pop() - берет верхний элемент
 
 
+            // 2 задача
+
+            Dictionary<string, int> clientsVisit = new Dictionary<string, int>();
+
+
+            while (true)
+            {
+                Console.Write("Здравствуйте, клиент! Введите Ваше имя: ");
+                string name = Console.ReadLine();
+                if (clientsVisit.ContainsKey(name))
+                {
+                    clientsVisit[name]++;
+
+                }
+                else
+                {
+                    clientsVisit.Add(name, 1);
+                }
+
+            }
 
 
 
