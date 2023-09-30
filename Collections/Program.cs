@@ -116,6 +116,9 @@
             {
                 Console.Write("Здравствуйте, клиент! Введите Ваше имя: ");
                 string name = Console.ReadLine();
+
+                if (name == "выход") break;
+                
                 if (clientsVisit.ContainsKey(name))
                 {
                     clientsVisit[name]++;
@@ -128,7 +131,10 @@
 
             }
 
-
+            foreach (var item in clientsVisit) 
+            {
+                Console.WriteLine($"Клиент по имени {item.Key} посетил магазин {item.Value} раз.");
+            }
 
 
             //SomeClass[] someClass = new SomeClass[]
