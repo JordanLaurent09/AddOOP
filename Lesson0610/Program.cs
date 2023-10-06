@@ -6,12 +6,29 @@ namespace Lesson0610
     // Контракт - то, что обязательно нужно реализовать классом
     // Правило - интерфейс начинается с буквы I
     // Интерфейсы - реализуются
+    // Приведение класса к интерфейсу - upcast,
+    // только в том случае, если класс реализует данный интерфейс
+
+
+    public enum Priority
+    {
+        Low,
+        Medium, 
+        High
+    }
+
 
     class Program
     {
         static void Main(string[] args)
         {
-            
+            TaskManager manager = new TaskManager();
+            manager.AddTask(new Task("Поход к врачу", new DateTime(2003, 3, 3), Priority.Low));
+            manager.AddTask(new Task("Поход в кафе", new DateTime(2023, 10, 13), Priority.High));
+            manager.AddTask(new Task("Отдых", new DateTime(2005, 6, 1), Priority.Medium));
+
+            manager.Display();
+
         }
     }
 
@@ -92,6 +109,94 @@ namespace Lesson0610
         public override Color Color { get; set; }   
     }
 
+
+    // Самостоятельная работа
+
+    public interface ITask
+    {
+        string Title { get; set; }
+        DateTime DueDate { get; set; }
+        Priority Priority { get; set; }
+
+        void Display();
+    }
+
+
+    public class Task : ITask
+    {
+        public string Title { get; set; }
+        public DateTime DueDate { get; set;}
+        public Priority Priority { get; set; }
+
+        public void Display()
+        {
+
+        }
+
+        public Task(string title, DateTime dueDate, Priority priority)
+        {
+            Title = title;
+            DueDate = dueDate;
+            Priority = priority;
+        }
+    }
+
+    public class Event : ITask
+    {
+        public string Title { get; set; }
+        public DateTime DueDate { get; set; }
+        public Priority Priority { get; set; }
+
+        public string Location { get; set; }
+
+        public  Event(string title, DateTime dueDate, Priority priority, string location)
+        {
+            Title = title;
+            DueDate = dueDate;
+            Priority = priority;
+            Location = location;
+        }
+
+        public void Display()
+        {
+
+        }
+    }
+
+    public class TaskManager
+    {
+        public List<ITask> DataList { get; set; }
+
+        public TaskManager()
+        {
+            DataList = new List<ITask>(); 
+        }
+
+        public void AddTask(Task task)
+        {
+            DataList.Add(task);
+        }
+
+        public void AddEvent(Event someEvent)
+        {
+            DataList.Add(someEvent);
+        }
+
+        public void Display()
+        {
+            foreach(var item in DataList)
+            {
+                Console.WriteLine(
+                    "{0}\n{1}\n{2}\n",
+                    item.Title, 
+                    item.DueDate, 
+                    item.Priority 
+                    );
+            }
+        }
+
+
+    }
 
 
 
