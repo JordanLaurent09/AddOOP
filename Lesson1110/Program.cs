@@ -43,7 +43,9 @@ namespace Lesson1110
             child.GeneralFieldOne = 23;
             child.GeneralFieldTwo = 21;
 
-            Car[] cars = new Car[3];
+
+            //
+            Transport[] cars = new Transport[3];
 
             Car speedrunner = new Car(250, "Гоночная машина");
             Car truck = new Car(100, "Грузовик");
