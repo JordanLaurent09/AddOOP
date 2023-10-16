@@ -6,9 +6,9 @@ namespace Lesson1110Part3
 {
 
     // Анонимные функции подразделяются на:
-    // 1. Анонимные типы
-    // 2. Анонимные методы
-    // 3. 
+    // 1. Анонимные типы - var
+    // 2. Анонимные методы - delegate
+    // 3. Лямбда-выражения - более компактный способо задания анонимных методов
     internal class Program
     {
 
@@ -21,6 +21,8 @@ namespace Lesson1110Part3
         delegate int MyDeleggate(int x, int y);
 
         delegate bool MyBoolDelegate(int x);
+
+        delegate double FactorialDelegate(int x);
 
 
         static void Main(string[] args)
@@ -68,6 +70,17 @@ namespace Lesson1110Part3
             };
 
             Console.WriteLine(isTrue(22));
+
+
+            // 3.
+            FactorialDelegate factorialNumber = delegate (int x)
+            {
+                if (x == 0 || x == 1) return 1;
+                return 0;
+            };
+
+
+            // 4.
 
 
 
