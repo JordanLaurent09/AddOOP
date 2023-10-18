@@ -31,9 +31,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson1110Part2", "Lesson11
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson1110Part3", "Lesson1110Part3\Lesson1110Part3.csproj", "{982EDC16-B0BE-4842-A44A-FD7510D648E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson1310", "Lesson1310\Lesson1310.csproj", "{ED80D4B3-C215-4D2F-A3C4-B8590B172662}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson1310", "Lesson1310\Lesson1310.csproj", "{ED80D4B3-C215-4D2F-A3C4-B8590B172662}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialFixation", "MaterialFixation\MaterialFixation.csproj", "{01300177-07EA-42F1-AD38-4C9D2521BDC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaterialFixation", "MaterialFixation\MaterialFixation.csproj", "{01300177-07EA-42F1-AD38-4C9D2521BDC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson1810", "Lesson1810\Lesson1810.csproj", "{4C7CE051-2C54-44FD-BF75-5A1007D4CEDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{01300177-07EA-42F1-AD38-4C9D2521BDC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01300177-07EA-42F1-AD38-4C9D2521BDC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01300177-07EA-42F1-AD38-4C9D2521BDC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C7CE051-2C54-44FD-BF75-5A1007D4CEDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C7CE051-2C54-44FD-BF75-5A1007D4CEDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C7CE051-2C54-44FD-BF75-5A1007D4CEDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C7CE051-2C54-44FD-BF75-5A1007D4CEDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
