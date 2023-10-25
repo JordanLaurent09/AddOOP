@@ -35,9 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson1310", "Lesson1310\Le
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaterialFixation", "MaterialFixation\MaterialFixation.csproj", "{01300177-07EA-42F1-AD38-4C9D2521BDC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson1810", "Lesson1810\Lesson1810.csproj", "{4C7CE051-2C54-44FD-BF75-5A1007D4CEDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson1810", "Lesson1810\Lesson1810.csproj", "{4C7CE051-2C54-44FD-BF75-5A1007D4CEDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSONproject", "JSONproject\JSONproject.csproj", "{DFCED463-1E08-4186-92C5-D1416D8846B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSONproject", "JSONproject\JSONproject.csproj", "{DFCED463-1E08-4186-92C5-D1416D8846B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Encryption", "Encryption\Encryption.csproj", "{1A74407A-FC6F-44FF-BD34-7E7496FB9296}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{DFCED463-1E08-4186-92C5-D1416D8846B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFCED463-1E08-4186-92C5-D1416D8846B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFCED463-1E08-4186-92C5-D1416D8846B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A74407A-FC6F-44FF-BD34-7E7496FB9296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A74407A-FC6F-44FF-BD34-7E7496FB9296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A74407A-FC6F-44FF-BD34-7E7496FB9296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A74407A-FC6F-44FF-BD34-7E7496FB9296}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
