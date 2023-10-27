@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadOperations", "ThreadO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadingDemonstration", "ThreadingDemonstration\ThreadingDemonstration.csproj", "{60EF65CD-9D00-4537-A289-6B87B9809168}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RacingGame", "RacingGame\RacingGame.csproj", "{BD7FF471-037E-41CA-A4CB-B9949B8544F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{60EF65CD-9D00-4537-A289-6B87B9809168}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60EF65CD-9D00-4537-A289-6B87B9809168}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60EF65CD-9D00-4537-A289-6B87B9809168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD7FF471-037E-41CA-A4CB-B9949B8544F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD7FF471-037E-41CA-A4CB-B9949B8544F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD7FF471-037E-41CA-A4CB-B9949B8544F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD7FF471-037E-41CA-A4CB-B9949B8544F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
