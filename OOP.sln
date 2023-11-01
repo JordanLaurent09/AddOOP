@@ -41,13 +41,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JSONproject", "JSONproject\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Encryption", "Encryption\Encryption.csproj", "{1A74407A-FC6F-44FF-BD34-7E7496FB9296}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson2710", "Lesson2710\Lesson2710.csproj", "{6D775A02-0D40-43E8-A212-32D8D0A804CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson2710", "Lesson2710\Lesson2710.csproj", "{6D775A02-0D40-43E8-A212-32D8D0A804CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadOperations", "ThreadOperations\ThreadOperations.csproj", "{1236419A-C17C-477A-8B3E-B6A4490228CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadOperations", "ThreadOperations\ThreadOperations.csproj", "{1236419A-C17C-477A-8B3E-B6A4490228CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadingDemonstration", "ThreadingDemonstration\ThreadingDemonstration.csproj", "{60EF65CD-9D00-4537-A289-6B87B9809168}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadingDemonstration", "ThreadingDemonstration\ThreadingDemonstration.csproj", "{60EF65CD-9D00-4537-A289-6B87B9809168}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RacingGame", "RacingGame\RacingGame.csproj", "{BD7FF471-037E-41CA-A4CB-B9949B8544F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RacingGame", "RacingGame\RacingGame.csproj", "{BD7FF471-037E-41CA-A4CB-B9949B8544F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson0111", "Lesson0111\Lesson0111.csproj", "{51267B58-9A18-499C-A6BF-3BBF9F2DB587}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -147,6 +149,10 @@ Global
 		{BD7FF471-037E-41CA-A4CB-B9949B8544F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD7FF471-037E-41CA-A4CB-B9949B8544F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD7FF471-037E-41CA-A4CB-B9949B8544F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51267B58-9A18-499C-A6BF-3BBF9F2DB587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51267B58-9A18-499C-A6BF-3BBF9F2DB587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51267B58-9A18-499C-A6BF-3BBF9F2DB587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51267B58-9A18-499C-A6BF-3BBF9F2DB587}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

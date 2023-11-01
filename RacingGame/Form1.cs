@@ -16,7 +16,9 @@ namespace RacingGame
             }
             CougarBTN.PointToScreen(new Point(CougarBTN.Left++, CougarBTN.Top));
             
-            //int currentPoint = CougarBTN.Location.X;          
+            //int currentPoint = CougarBTN.Location.X;
+            //
+            ZhiguleeBTN.
         }
     }
 }
