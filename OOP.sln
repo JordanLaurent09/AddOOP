@@ -49,7 +49,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadingDemonstration", "T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RacingGame", "RacingGame\RacingGame.csproj", "{BD7FF471-037E-41CA-A4CB-B9949B8544F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson0111", "Lesson0111\Lesson0111.csproj", "{51267B58-9A18-499C-A6BF-3BBF9F2DB587}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson0111", "Lesson0111\Lesson0111.csproj", "{51267B58-9A18-499C-A6BF-3BBF9F2DB587}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson0111ThreadingContinue", "Lesson0111ThreadingContinue\Lesson0111ThreadingContinue.csproj", "{018BE57E-1BDE-4F5C-9ECC-2F449D70933C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +155,10 @@ Global
 		{51267B58-9A18-499C-A6BF-3BBF9F2DB587}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51267B58-9A18-499C-A6BF-3BBF9F2DB587}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51267B58-9A18-499C-A6BF-3BBF9F2DB587}.Release|Any CPU.Build.0 = Release|Any CPU
+		{018BE57E-1BDE-4F5C-9ECC-2F449D70933C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018BE57E-1BDE-4F5C-9ECC-2F449D70933C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018BE57E-1BDE-4F5C-9ECC-2F449D70933C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018BE57E-1BDE-4F5C-9ECC-2F449D70933C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
