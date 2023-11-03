@@ -41,7 +41,7 @@
 
         public static void Foo()
         {
-            Task task = Task.Factory.StartNew(() => { Console.WriteLine("Я вложенный поток"); });
+            Task task = Task.Factory.StartNew(() => { Console.WriteLine("Я вложенный поток"); Task.Delay(2000).Wait();});
             Task.Delay(1000).Wait();
             for(int i = 0; i < 100; i++)
             {
