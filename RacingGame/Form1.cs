@@ -18,7 +18,7 @@ namespace RacingGame
             
             //int currentPoint = CougarBTN.Location.X;
             //
-            ZhiguleeBTN.
+            //ZhiguleeBTN.SetBounds()
         }
     }
 }

@@ -51,7 +51,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RacingGame", "RacingGame\Ra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson0111", "Lesson0111\Lesson0111.csproj", "{51267B58-9A18-499C-A6BF-3BBF9F2DB587}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson0111ThreadingContinue", "Lesson0111ThreadingContinue\Lesson0111ThreadingContinue.csproj", "{018BE57E-1BDE-4F5C-9ECC-2F449D70933C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson0111ThreadingContinue", "Lesson0111ThreadingContinue\Lesson0111ThreadingContinue.csproj", "{018BE57E-1BDE-4F5C-9ECC-2F449D70933C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson0311", "Lesson0311\Lesson0311.csproj", "{415CA3F4-C6F1-4A17-98FB-D6FF4EC82674}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,6 +161,10 @@ Global
 		{018BE57E-1BDE-4F5C-9ECC-2F449D70933C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{018BE57E-1BDE-4F5C-9ECC-2F449D70933C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{018BE57E-1BDE-4F5C-9ECC-2F449D70933C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{415CA3F4-C6F1-4A17-98FB-D6FF4EC82674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{415CA3F4-C6F1-4A17-98FB-D6FF4EC82674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{415CA3F4-C6F1-4A17-98FB-D6FF4EC82674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{415CA3F4-C6F1-4A17-98FB-D6FF4EC82674}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
