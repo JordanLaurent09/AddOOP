@@ -61,6 +61,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncTasks", "AsyncTasks\As
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepeatLesson", "RepeatLesson\RepeatLesson.csproj", "{0B92DFBF-EC3C-46D0-AB1B-801525EA909E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepeatLessonTwo", "RepeatLessonTwo\RepeatLessonTwo.csproj", "{AA95B922-B592-475E-B059-72EAFF270F06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -183,6 +185,10 @@ Global
 		{0B92DFBF-EC3C-46D0-AB1B-801525EA909E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B92DFBF-EC3C-46D0-AB1B-801525EA909E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B92DFBF-EC3C-46D0-AB1B-801525EA909E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA95B922-B592-475E-B059-72EAFF270F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA95B922-B592-475E-B059-72EAFF270F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA95B922-B592-475E-B059-72EAFF270F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA95B922-B592-475E-B059-72EAFF270F06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
