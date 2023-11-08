@@ -50,7 +50,7 @@
 
         public decimal Price { get; set; }
 
-        public List<string> Stations { get; set; }
+        public List<string> Stations { get; set; } = new List<string>();
 
         public Train(DateTime departureTime, decimal price, List<string> stations)
         {
