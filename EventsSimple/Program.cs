@@ -1,4 +1,6 @@
-﻿namespace EventsSimple
+﻿using static EventsSimple.Program;
+
+namespace EventsSimple
 {
     
     internal class Program
@@ -19,6 +21,5 @@
                 }
             }
         }
-    }
-    
+    }  
 }
