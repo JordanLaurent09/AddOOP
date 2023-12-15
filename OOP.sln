@@ -59,13 +59,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TasksFurtherWork", "TasksFu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncTasks", "AsyncTasks\AsyncTasks.csproj", "{E1F47A67-EAD7-4CFB-A30E-7FAB19620E6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepeatLesson", "RepeatLesson\RepeatLesson.csproj", "{0B92DFBF-EC3C-46D0-AB1B-801525EA909E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepeatLesson", "RepeatLesson\RepeatLesson.csproj", "{0B92DFBF-EC3C-46D0-AB1B-801525EA909E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepeatLessonTwo", "RepeatLessonTwo\RepeatLessonTwo.csproj", "{AA95B922-B592-475E-B059-72EAFF270F06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepeatLessonTwo", "RepeatLessonTwo\RepeatLessonTwo.csproj", "{AA95B922-B592-475E-B059-72EAFF270F06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventsSimple", "EventsSimple\EventsSimple.csproj", "{3E4B4A6E-F22B-4A31-9395-25591CECF425}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsSimple", "EventsSimple\EventsSimple.csproj", "{3E4B4A6E-F22B-4A31-9395-25591CECF425}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepeatLessonThree", "RepeatLessonThree\RepeatLessonThree.csproj", "{BE4D5135-78F7-4E43-83A3-3772BC2F793D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepeatLessonThree", "RepeatLessonThree\RepeatLessonThree.csproj", "{BE4D5135-78F7-4E43-83A3-3772BC2F793D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme_32_Lesson_3_DataBaseOperating", "Theme_32_Lesson_3_DataBaseOperating\Theme_32_Lesson_3_DataBaseOperating.csproj", "{029168E6-FCB4-4054-9507-3A98607CAD57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -201,6 +203,10 @@ Global
 		{BE4D5135-78F7-4E43-83A3-3772BC2F793D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE4D5135-78F7-4E43-83A3-3772BC2F793D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE4D5135-78F7-4E43-83A3-3772BC2F793D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{029168E6-FCB4-4054-9507-3A98607CAD57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{029168E6-FCB4-4054-9507-3A98607CAD57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{029168E6-FCB4-4054-9507-3A98607CAD57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{029168E6-FCB4-4054-9507-3A98607CAD57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
