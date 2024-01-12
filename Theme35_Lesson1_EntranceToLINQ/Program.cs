@@ -1,4 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
+using CsvHelper;
+using CsvHelper.Configuration;
+using System.Globalization;
 
 namespace Theme35_Lesson1_EntranceToLINQ
 {
@@ -137,6 +140,31 @@ namespace Theme35_Lesson1_EntranceToLINQ
             IOrderedEnumerable<double> sortedArrExtensions = arrayOfDoubles
                 .OrderBy(item => item);
             // ThenBy() вызывается ТОЛЬКО при интерфейсе IOrderedEnumerable
+
+
+            StreamReader reader = new StreamReader("movies.csv");
+
+            CsvConfiguration csvConfiguration = new CsvConfiguration(CultureInfo.InvariantCulture);
+            
+
+            CsvReader csvReader = new CsvReader(reader, csvConfiguration);
+
+            List<Movies> movies = csvReader.GetRecords<Movies>().ToList();
+
+            reader.Close();
+
+
+            // 1. C оценкой 8.5 и выше по убыванию
+
+            IOrderedEnumerable<Movies> films = movies.OrderByDescending(item => item.Graduate).ThenBy(item => item.Name);
+
+            foreach(Movies item in films)
+            {
+                Console.WriteLine($"{item.Id} {item.Name} {item.Director} {item.Genre} {item.Graduate}");
+            }
+
+
+
         }
     }
 
