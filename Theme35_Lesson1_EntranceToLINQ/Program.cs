@@ -13,6 +13,8 @@ namespace Theme35_Lesson1_EntranceToLINQ
 
 
     // 3. OfType<Тип>() - фильтрация по типу
+
+    // 4. DB-Style: ключевой оператор orderby
     internal class Program
     {
         static void Main(string[] args)
@@ -121,8 +123,20 @@ namespace Theme35_Lesson1_EntranceToLINQ
             //    Console.WriteLine(item.Name);
             //}
 
-            
+            double[] arrayOfDoubles = new double[]
+            {
 
+            };
+
+            // Сортировка на чистом LINQ
+            IOrderedEnumerable<double> sortedArr = from item in arrayOfDoubles
+                                                   orderby item
+                                                   select item;
+
+            // Сортировка на методах расширения
+            IOrderedEnumerable<double> sortedArrExtensions = arrayOfDoubles
+                .OrderBy(item => item);
+            // ThenBy() вызывается ТОЛЬКО при интерфейсе IOrderedEnumerable
         }
     }
 
