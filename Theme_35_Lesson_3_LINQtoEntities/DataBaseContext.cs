@@ -4,7 +4,10 @@ namespace Theme_35_Lesson_3_LINQtoEntities
 {
     public class DataBaseContext: DbContext
     {
-        public DbSet<User> ?Users { get; set; } = null;
+        public DbSet<User> Users { get; set; } = null!;
+
+
+        public DbSet<TelephoneNumber> TelephoneNumber { get; set; } = null!;
 
         public DataBaseContext()
         {

@@ -17,22 +17,57 @@ namespace Theme_35_Lesson_3_LINQtoEntities
 
             //};
 
-            List<User> users;
+            //List<User> users;
 
             using (DataBaseContext db = new())
             {
+                // Заполнение таблицу данными
                 //db.Users.AddRange(userList);
                 //db.SaveChanges();
 
-                users = (from user in db.Users.Include(p => p.Number)
-                         where user.Id % 2 == 0
-                         select user).ToList();
+                // Исп. ЛИНК для работы с БД
+                //users = (from user in db.Users.Include(p => p.Number)
+                //         where user.Id % 2 == 0
+                //         select user).ToList();
+
+                // Использование JOIN
+                //var users = db.Users.Join(db.TelephoneNumber,
+                //    u => u.Number.Id,
+                //    n => n.Id,
+                //    (u, n) => new
+                //    {
+                //        Name = u.Name,
+                //        Number = n.Number,
+                //        Age = u.Age
+                //    });
+
+                // Это работает только с локальными клиентскими ДБ (такими, как SQLITE)
+                //var grouppedByAge = db.Users
+                //    .GroupBy(u => u.Age)
+                //    .OrderBy(g => g.Key);
+
+                // А это сработает c MySQL
+                var grouppedByAge = db.Users // DbSet<> - не реализует интерфейс IEnumerable, поэтому ее нужно приводить к такому типу(при необходимости), либо пользоваться "родными" способами работы с DbSet<>
+                    .AsEnumerable()
+                    .GroupBy(u => u.Age) // так как работает только для IEnumerable
+                    .OrderBy(g => g.Key);
+
+
+
+                foreach (var group in grouppedByAge)
+                {
+                    Console.WriteLine($"Группа пользователей с возрастом {group.Key}");
+
+                    foreach(var user in group)
+                    {
+                        Console.WriteLine(user.Name);
+                    }
+                    Console.WriteLine();
+                }
+
             }
 
-            foreach(var user in users)
-            {
-                Console.WriteLine($"{user.Id} {user.Name} {user.Age} {user?.Number?.Number}");
-            }
+            
         }
     }
 }
