@@ -32,6 +32,18 @@
             Cereal rice = new Cereal("Rice", 4534m, "Pedro", CerealType.РИС);
 
 
+            Frukt one = new Frukt(23, 44m);
+            TastyFrukt two = new TastyFrukt(10, 100m);
+
+            List<IFruitlikeness> fruits = new List<IFruitlikeness>();
+            fruits.Add(one);
+            fruits.Add(two);
+
+            // ДОДЕЛАТЬ
+            foreach(IFruitlikeness item in fruits)
+            {
+                
+            }
         }
     }
 }
