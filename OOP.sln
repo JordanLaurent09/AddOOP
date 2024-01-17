@@ -73,7 +73,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Theme_32_Lesson_4_DatabaseO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Theme_32_Lesson_4_Practice", "Theme_32_Lesson_4_Practice\Theme_32_Lesson_4_Practice.csproj", "{068773EA-E248-41BD-BB91-879B6C1397A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme35_Lesson1_EntranceToLINQ", "Theme35_Lesson1_EntranceToLINQ\Theme35_Lesson1_EntranceToLINQ.csproj", "{888EE05A-8E82-4ED1-A1A4-06DFAF42B97A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Theme35_Lesson1_EntranceToLINQ", "Theme35_Lesson1_EntranceToLINQ\Theme35_Lesson1_EntranceToLINQ.csproj", "{888EE05A-8E82-4ED1-A1A4-06DFAF42B97A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme_35_Lesson_3_LINQtoEntities", "Theme_35_Lesson_3_LINQtoEntities\Theme_35_Lesson_3_LINQtoEntities.csproj", "{E4777B5A-93C9-4655-B8B8-F74382705834}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -225,6 +227,10 @@ Global
 		{888EE05A-8E82-4ED1-A1A4-06DFAF42B97A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{888EE05A-8E82-4ED1-A1A4-06DFAF42B97A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{888EE05A-8E82-4ED1-A1A4-06DFAF42B97A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4777B5A-93C9-4655-B8B8-F74382705834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4777B5A-93C9-4655-B8B8-F74382705834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4777B5A-93C9-4655-B8B8-F74382705834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4777B5A-93C9-4655-B8B8-F74382705834}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
