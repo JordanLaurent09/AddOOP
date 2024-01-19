@@ -81,6 +81,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Theme_35_Lesson_4_OOPTasks"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme_36_ConsoleShop", "Theme_36_ConsoleShop\Theme_36_ConsoleShop.csproj", "{7CBC5147-570A-4161-A460-1A33016DA5BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme_36_ConsoleShop_V2", "Theme_36_ConsoleShop_V2\Theme_36_ConsoleShop_V2.csproj", "{5DA72E29-B4DF-418A-B32F-AD6013F70E05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -243,6 +245,10 @@ Global
 		{7CBC5147-570A-4161-A460-1A33016DA5BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CBC5147-570A-4161-A460-1A33016DA5BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CBC5147-570A-4161-A460-1A33016DA5BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DA72E29-B4DF-418A-B32F-AD6013F70E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DA72E29-B4DF-418A-B32F-AD6013F70E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DA72E29-B4DF-418A-B32F-AD6013F70E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DA72E29-B4DF-418A-B32F-AD6013F70E05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
