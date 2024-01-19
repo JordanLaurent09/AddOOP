@@ -35,14 +35,18 @@
             Frukt one = new Frukt(23, 44m);
             TastyFrukt two = new TastyFrukt(10, 100m);
 
-            List<IFruitlikeness> fruits = new List<IFruitlikeness>();
-            fruits.Add(one);
-            fruits.Add(two);
-
-            // ДОДЕЛАТЬ
-            foreach(IFruitlikeness item in fruits)
+            List<IFruitlikeness> fruits = new List<IFruitlikeness>()
             {
-                
+                new Frukt(33.3, 212m),
+                new TastyFrukt(11.2, 434m)
+            };
+            //fruits.Add(one);
+            //fruits.Add(two);
+
+            
+            foreach(var item in fruits)
+            {
+                Console.WriteLine($"Цена - {item.Price}, количество сахара - {item.SugarQuantity}");
             }
         }
     }

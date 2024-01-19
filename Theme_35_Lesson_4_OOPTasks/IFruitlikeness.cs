@@ -2,5 +2,7 @@
 {
     public interface IFruitlikeness
     {
+        public double SugarQuantity { get; set; }
+        public decimal Price { get; set; }
     }
 }
