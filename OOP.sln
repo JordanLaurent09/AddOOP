@@ -75,9 +75,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Theme_32_Lesson_4_Practice"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Theme35_Lesson1_EntranceToLINQ", "Theme35_Lesson1_EntranceToLINQ\Theme35_Lesson1_EntranceToLINQ.csproj", "{888EE05A-8E82-4ED1-A1A4-06DFAF42B97A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme_35_Lesson_3_LINQtoEntities", "Theme_35_Lesson_3_LINQtoEntities\Theme_35_Lesson_3_LINQtoEntities.csproj", "{E4777B5A-93C9-4655-B8B8-F74382705834}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Theme_35_Lesson_3_LINQtoEntities", "Theme_35_Lesson_3_LINQtoEntities\Theme_35_Lesson_3_LINQtoEntities.csproj", "{E4777B5A-93C9-4655-B8B8-F74382705834}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme_35_Lesson_4_OOPTasks", "Theme_35_Lesson_4_OOPTasks\Theme_35_Lesson_4_OOPTasks.csproj", "{02A1672B-73F5-41FE-8032-E1821A98A34B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Theme_35_Lesson_4_OOPTasks", "Theme_35_Lesson_4_OOPTasks\Theme_35_Lesson_4_OOPTasks.csproj", "{02A1672B-73F5-41FE-8032-E1821A98A34B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme_36_ConsoleShop", "Theme_36_ConsoleShop\Theme_36_ConsoleShop.csproj", "{7CBC5147-570A-4161-A460-1A33016DA5BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -237,6 +239,10 @@ Global
 		{02A1672B-73F5-41FE-8032-E1821A98A34B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02A1672B-73F5-41FE-8032-E1821A98A34B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02A1672B-73F5-41FE-8032-E1821A98A34B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CBC5147-570A-4161-A460-1A33016DA5BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CBC5147-570A-4161-A460-1A33016DA5BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CBC5147-570A-4161-A460-1A33016DA5BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CBC5147-570A-4161-A460-1A33016DA5BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
