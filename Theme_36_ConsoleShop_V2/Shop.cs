@@ -60,11 +60,8 @@
             {
                 client = new Client(name, age, balance);
             }
-            //SpecialGift(client);
 
-            Console.WriteLine($"Привет, {client.Name}");
-
-            //ProductMenu(products, client);
+            Console.WriteLine($"Привет, {client.Name}!\nВаш баланс: {client.Balance}\nВы совершили покупок на сумму: {client.WastedMoney}");
 
             ShopOptions(products, client);
 
@@ -157,6 +154,8 @@
             client.WastedMoney += wastedValue;
 
             client.Balance -= wastedValue;
+
+            Console.WriteLine($"Вы успешно купили {product.Title} в количестве {amount} единиц, потратив {wastedValue} рублей.");
 
             string info = $"Покупатель {client.Name} приобрел {product.Title} в количестве {amount} единиц, потратив {wastedValue} рублей.";
 
