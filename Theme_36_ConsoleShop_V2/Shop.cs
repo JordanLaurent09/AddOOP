@@ -138,13 +138,9 @@
                 
             Console.WriteLine("Введите количество товара для покупки:");
             int amount = int.Parse(Console.ReadLine()!);
-
             
-
             decimal wastedValue = amount * newPrice;
-
-            
- 
+           
             if(client.Balance - wastedValue < 0)
             {
                 Console.WriteLine("У Вас не хватает баланса для совершения данной покупки!");
@@ -161,8 +157,7 @@
 
             PurchaseLog.Add(info);
 
-            Console.WriteLine("Спасибо за покупку!");
-          
+            Console.WriteLine("Спасибо за покупку!");         
         }
 
         /// <summary>
