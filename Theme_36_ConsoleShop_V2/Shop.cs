@@ -49,9 +49,18 @@
             Console.WriteLine("Введите баланс:");
             decimal balance = decimal.Parse(Console.ReadLine()!);
 
-            Client client = new Client(name, age, balance);
+            Client client;
+            if (IsLucky() == true)
+            {
+                Console.WriteLine("Ура! И у нас - победитель!");
 
-            SpecialGift(client);
+                client = new LuckyClient(name, age, balance);
+            }
+            else
+            {
+                client = new Client(name, age, balance);
+            }
+            //SpecialGift(client);
 
             Console.WriteLine($"Привет, {client.Name}");
 
@@ -118,7 +127,7 @@
             Product product = goods[index - 1];
 
             decimal newPrice = 0m;
-            string info = $"Покупатель {client.Name} приобрел {product.Title} ";
+            
             decimal discount = product.GetDiscount(client);
             if (product is not PowerSupply)
             {
@@ -133,11 +142,11 @@
             Console.WriteLine("Введите количество товара для покупки:");
             int amount = int.Parse(Console.ReadLine()!);
 
-            info += $" в количестве {amount} единиц, ";
+            
 
             decimal wastedValue = amount * newPrice;
 
-            info += $"потратив {wastedValue} рублей.";
+            
  
             if(client.Balance - wastedValue < 0)
             {
@@ -148,7 +157,9 @@
             client.WastedMoney += wastedValue;
 
             client.Balance -= wastedValue;
-                
+
+            string info = $"Покупатель {client.Name} приобрел {product.Title} в количестве {amount} единиц, потратив {wastedValue} рублей.";
+
             PurchaseLog.Add(info);
 
             Console.WriteLine("Спасибо за покупку!");
@@ -171,7 +182,7 @@
         }
 
         /// <summary>
-        /// Акция по увеличению баланса
+        /// Акция по увеличению баланса(устраревший метод)
         /// </summary>
         /// <param name="client"></param>
         private void SpecialGift(Client client)
@@ -191,7 +202,31 @@
             }
         }
 
+        /// <summary>
+        /// Проверка на счастливого пользователя
+        /// </summary>
+        /// <returns></returns>
+        private bool IsLucky()
+        {
+            bool isLucky = false;
 
+            Random random = new Random();
+
+            int number = random.Next(1, 4);
+
+            Console.WriteLine("Попробуйте угадать число от 1 до 3");
+
+            int guessNumber = int.Parse(Console.ReadLine()!);
+
+            if (guessNumber == number) isLucky = true;
+
+            return isLucky;
+        }
+
+        /// <summary>
+        /// Запись в файл информации о покупках
+        /// </summary>
+        /// <param name="info"></param>
         public void WriteToFile(List<string> info)
         {
             File.AppendAllLines("buysInfo.txt", info);
