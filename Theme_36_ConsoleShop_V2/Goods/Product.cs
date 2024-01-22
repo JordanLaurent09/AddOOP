@@ -17,14 +17,14 @@
         public virtual decimal GetDiscount(Client client)
         {
             decimal discount = 0m;
-            //Проверка по приоритету потраченных денег
-            if (client.WastedMoney >= 10000m && client.WastedMoney < 50000m)
-            {
-                discount += Price / 20m;
-            }
-            else if (client.WastedMoney >= 50000m)
+            
+            if (client.WastedMoney >= 50000m)
             {
                 discount += Price / 10m;
+            }
+            else if (client.WastedMoney >= 10000m)
+            {
+                discount += Price / 20m;
             }
 
             return discount;

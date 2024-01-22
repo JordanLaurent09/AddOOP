@@ -2,10 +2,11 @@
 {
     public class Shop
     {
-        //Сеттер списка товаров - приватный
         public List<Product> Goods { get; set; }
 
         public List<DateTime> Holidays { get; }
+
+        public List<string> PurchaseLog { get; set; } = new List<string>();
         public Shop()
         {
             Goods = new List<Product>()
@@ -14,7 +15,7 @@
                 new Motherboard(2, "Motherboard", 12350m),
                 new PowerSupply(3, "PowerSupply", 5450m),
                 new Videocard(4, "Videocard", 20000m),
-                new Corpus(5, "Corpus", 11000m),
+                new Case(5, "Case", 11000m),
                 new CoolingSystem(6, "CoolingSystem", 15500m)
             };
 
@@ -52,10 +53,39 @@
 
             SpecialGift(client);
 
-            Console.WriteLine($"Hello, {client.Name}");
+            Console.WriteLine($"Привет, {client.Name}");
 
-            ProductMenu(products, client);
+            //ProductMenu(products, client);
+
+            ShopOptions(products, client);
+
+            WriteToFile(PurchaseLog);
         }
+
+        /// <summary>
+        /// Главное меню магазина
+        /// </summary>
+        /// <param name="products"></param>
+        /// <param name="client"></param>
+        private void ShopOptions(List<Product> products, Client client)
+        {
+            while (true)
+            {
+                Console.WriteLine("Чего изволите?\n1.Посмотреть товары и закупиться - [1]\n2.Покинуть магазин - [2]");
+                string option = Console.ReadLine()!;
+
+                switch (option)
+                {
+                    case "1":
+                        ProductMenu(products, client);
+                        break;
+                    case "2":
+                        Console.WriteLine("До свидания, до новых встреч!");
+                        return;
+                }
+            }
+        }
+
 
         /// <summary>
         /// Вывод информации о товарах с учетом скидок и совершение покупок
@@ -63,53 +93,66 @@
         /// <param name="goods"></param>
         /// <param name="client"></param>
         private void ProductMenu(List<Product> goods, Client client)
-        {
-            while (true)
+        {                       
+            Console.WriteLine($"Ваш текущий баланс: {client.Balance}");
+            foreach (Product item in goods)
             {
-                Console.WriteLine($"Ваш текущий баланс: {client.Balance}");
-                foreach (Product item in goods)
+                decimal salePrice = 0m;
+                decimal sale = item.GetDiscount(client);
+                if (item is not PowerSupply)
                 {
-                    decimal salePrice = 0m;
-                    decimal sale = item.GetDiscount(client);
-                    if (item is not PowerSupply)
-                    {
-                        decimal holidaySale = HolidaySale(item.Price);
-                        salePrice = item.Price - sale - holidaySale;
-                    }
-                    else
-                    {
-                        salePrice = item.Price - sale;
-                    }                   
-                    Console.WriteLine($"[{item.Id}] Название товара: {item.Title} Цена товара:{salePrice}");
+                    decimal holidaySale = HolidaySale(item.Price);
+                    salePrice = item.Price - sale - holidaySale;
                 }
-
-
-                Console.WriteLine("Введите номер товара:");
-                int index = int.Parse(Console.ReadLine()!);
-
-                Product product = goods[index - 1];
-
-                decimal newPrice = 0m;
-                decimal discount = product.GetDiscount(client);
-                if (product is not PowerSupply)
+                else
                 {
-                    decimal holidaySale = HolidaySale(product.Price);
-                    newPrice = product.Price - discount - holidaySale;
-                }
-                else 
-                {
-                    newPrice = product.Price - discount;
-                }
-                
-                Console.WriteLine("Введите количество товара для покупки:");
-                int amount = int.Parse(Console.ReadLine()!);
-
-                decimal wastedValue = amount * newPrice;
-
-                client.WastedMoney += wastedValue;
-
-                client.Balance -= wastedValue;
+                    salePrice = item.Price - sale;
+                }                   
+                Console.WriteLine($"[{item.Id}] Название товара: {item.Title} Цена товара:{salePrice}");
             }
+               
+
+            Console.WriteLine("Введите номер товара:");
+            int index = int.Parse(Console.ReadLine()!);
+
+            Product product = goods[index - 1];
+
+            decimal newPrice = 0m;
+            string info = $"Покупатель {client.Name} приобрел {product.Title} ";
+            decimal discount = product.GetDiscount(client);
+            if (product is not PowerSupply)
+            {
+                decimal holidaySale = HolidaySale(product.Price);
+                newPrice = product.Price - discount - holidaySale;
+            }
+            else 
+            {
+                newPrice = product.Price - discount;
+            }
+                
+            Console.WriteLine("Введите количество товара для покупки:");
+            int amount = int.Parse(Console.ReadLine()!);
+
+            info += $" в количестве {amount} единиц, ";
+
+            decimal wastedValue = amount * newPrice;
+
+            info += $"потратив {wastedValue} рублей.";
+ 
+            if(client.Balance - wastedValue < 0)
+            {
+                Console.WriteLine("У Вас не хватает баланса для совершения данной покупки!");
+                return;
+            }
+
+            client.WastedMoney += wastedValue;
+
+            client.Balance -= wastedValue;
+                
+            PurchaseLog.Add(info);
+
+            Console.WriteLine("Спасибо за покупку!");
+          
         }
 
         /// <summary>
@@ -146,6 +189,12 @@
                 Console.WriteLine("Ура! Ваш баланс удвоился!");
                 client.Balance *= 2;
             }
+        }
+
+
+        public void WriteToFile(List<string> info)
+        {
+            File.AppendAllLines("buysInfo.txt", info);
         }
     }
 }
