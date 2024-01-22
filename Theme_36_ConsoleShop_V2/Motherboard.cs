@@ -1,10 +1,9 @@
 ﻿namespace Theme_36_ConsoleShop_V2
 {
-    public class Motherboard:Product
+    public class Motherboard : Product
     {
-        public Motherboard(string name, decimal price):base(name, price)
+        public Motherboard(int id, string title, decimal price) : base(id, title, price)
         {
-
         }
     }
 }

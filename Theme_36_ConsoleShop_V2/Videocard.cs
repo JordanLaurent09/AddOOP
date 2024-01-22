@@ -1,10 +1,9 @@
 ﻿namespace Theme_36_ConsoleShop_V2
 {
-    public class Videocard:Product
+    public class Videocard : Product
     {
-        public Videocard(string name, decimal price):base(name, price)
+        public Videocard(int id, string title, decimal price) : base(id, title, price)
         {
-
         }
     }
 }

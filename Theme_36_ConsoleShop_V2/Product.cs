@@ -2,26 +2,29 @@
 {
     public class Product
     {
-        public string Name { get; set; }
-
+        public int Id { get; set; }
+        public string Title { get; set; }
         public decimal Price { get; set; }
 
-        public Product(string name, decimal price)
+        public Product(int id, string title, decimal price)
         {
-            Name = name;
+            Id = id;
+            Title = title;
             Price = price;
         }
 
-        public decimal GetDiscount(Client client)
+
+        public virtual decimal GetDiscount(Client client)
         {
             decimal discount = 0m;
-            if(client.WastedMoney > 10000m && client.WastedMoney < 50000m)
+            //Проверка по приоритету потраченных денег
+            if (client.WastedMoney >= 10000m && client.WastedMoney < 50000m)
             {
-                discount += (Price / 100) * 5;
+                discount += Price / 20m;
             }
-            if(client.WastedMoney > 50000m)
+            else if (client.WastedMoney >= 50000m)
             {
-                discount += (Price / 100) * 10;
+                discount += Price / 10m;
             }
 
             return discount;
