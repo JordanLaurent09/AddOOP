@@ -79,16 +79,7 @@
                     else
                     {
                         salePrice = item.Price - sale;
-                    }
-                    //if (item.Id != 3)
-                    //{
-                    //    decimal holidaySale = HolidaySale(item.Price);
-                    //    salePrice = item.Price - sale - holidaySale;
-                    //}
-                    //else if (item.Id == 3)
-                    //{
-                    //    salePrice = item.Price - sale;
-                    //}
+                    }                   
                     Console.WriteLine($"[{item.Id}] Название товара: {item.Title} Цена товара:{salePrice}");
                 }
 
@@ -109,15 +100,7 @@
                 {
                     newPrice = product.Price - discount;
                 }
-                //if (product.Id != 3)
-                //{
-                //    decimal holidaySale = HolidaySale(product.Price);
-                //    newPrice = product.Price - discount - holidaySale;
-                //}
-                //else if (product.Id == 3)
-                //{
-                //    newPrice = product.Price - discount;
-                //}
+                
                 Console.WriteLine("Введите количество товара для покупки:");
                 int amount = int.Parse(Console.ReadLine()!);
 
@@ -129,7 +112,11 @@
             }
         }
 
-        // Скидка от магазина по выходным
+        /// <summary>
+        /// Скидка от магазина по выходным
+        /// </summary>
+        /// <param name="price"></param>
+        /// <returns></returns>
         private decimal HolidaySale(decimal price)
         {
             decimal discount = 0m;
@@ -140,7 +127,10 @@
             return discount;
         }
 
-        // Акция по увеличению баланса
+        /// <summary>
+        /// Акция по увеличению баланса
+        /// </summary>
+        /// <param name="client"></param>
         private void SpecialGift(Client client)
         {
             Random random = new Random();
